@@ -9,14 +9,14 @@ from collections import Counter
 import matplotlib.pyplot as plt
 api_service_name = "youtube"
 api_version = "v3"
-DEVELOPER_KEY = "AIzaSyC9K23MoGOYlqrk4aqFNtKpjAKnAZwVe4Q"
+DEVELOPER_KEY = "enter your developer key"
 
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=DEVELOPER_KEY)
 
 request = youtube.commentThreads().list(
     part="snippet",
-    videoId="uFvtCUzfyL4",
+    videoId="enter your video ID",
     maxResults=100
 )
 response = request.execute()
